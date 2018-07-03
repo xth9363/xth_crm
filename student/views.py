@@ -9,6 +9,8 @@ from crm.permissions import permission
 
 @permission.check_permission
 def stu_my_classes(request):
+    # print(stu_my_classes)
+    # return HttpResponse("123")
     return render(request,"student/my_classes.html")
 
 @permission.check_permission

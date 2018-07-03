@@ -86,17 +86,17 @@ class CustomerFollowUp(models.Model):
 
 class Course(models.Model):
     '''课程表'''
-    name = models.CharField(max_length=64, unique=True)
-    price = models.PositiveSmallIntegerField()
+    name = models.CharField(max_length=64, unique=True,verbose_name="课程名")
+    price = models.PositiveSmallIntegerField(verbose_name="价格")
     period = models.PositiveSmallIntegerField(verbose_name="周期(月)")
-    outline = models.TextField()
+    outline = models.TextField(verbose_name="大纲")
 
     def __str__(self):
         return self.name
 
     class Meta:
-        verbose_name = "课程表"
-        verbose_name_plural = "课程表"
+        verbose_name = "课程"
+        verbose_name_plural = "课程"
 
 
 class Branch(models.Model):
@@ -206,7 +206,8 @@ class Enrollment(models.Model):
 
     class Meta:
         unique_together = ("customer", "enrolled_class")
-        verbose_name_plural = "报名表"
+        verbose_name_plural = "报名"
+        verbose_name= "报名"
 
 
 class Payment(models.Model):
@@ -222,6 +223,7 @@ class Payment(models.Model):
 
     class Meta:
         verbose_name_plural = "缴费记录"
+        verbose_name = "缴费记录"
 
 
 # class UserProfile(models.Model):

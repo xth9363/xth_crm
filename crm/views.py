@@ -47,7 +47,6 @@ def stu_registration(request,enroll_id,random_str):
             else:
                 status =  0
             customer_form = forms.CustomerForm(instance=enroll_obj.customer)
-
         return  render(request,"sales/stu_registration.html",
                        {"customer_form":customer_form,
                         "enroll_obj":enroll_obj,
