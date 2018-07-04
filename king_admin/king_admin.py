@@ -86,10 +86,10 @@ class CustomerAdmin(BaseAdmin):
                 params={'field': "content", },
             )
 
-    def clean_name(self):
-        print("name clean validation:", self.cleaned_data["name"])
-        if not self.cleaned_data["name"]:
-            self.add_error('name', "cannot be null")
+    # def clean_name(self):
+    #     print("name clean validation:", self.cleaned_data["name"])
+    #     if not self.cleaned_data["name"]:
+    #         self.add_error('name', "cannot be null")
 
 
 class CustomerFollowUpAdmin(BaseAdmin):

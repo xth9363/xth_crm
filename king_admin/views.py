@@ -32,7 +32,7 @@ def display_table_objs(request, app_name, table_name, teacher=None):
     # admin_class = king_admin.enabled_admins[crm][userprofile]
     if request.method == "POST":  # action 来了
 
-        print(request.POST)
+        print('内容',request.POST)
         selected_ids = request.POST.get("selected_ids")
         action = request.POST.get("action")
         if selected_ids:
