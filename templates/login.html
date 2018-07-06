@@ -4,8 +4,8 @@
     <div class="container col-lg-offset-4 ">
       <form class="form-signin col-lg-3 pu " method="post"  role="form">{% csrf_token %}
         <h3 class="form-signin-heading">CRM</h3>
-        <input type="email"  name="email" class="form-control" placeholder="Email address" required autofocus>
-        <input type="password" name="password" class="form-control" placeholder="Password" required>
+        <input type="email"  name="email" class="form-control" placeholder="Email address" required autofocus value="xth9363@163.com1">
+        <input type="password" name="password" class="form-control" placeholder="Password" required value="123456">
         {% if errors %}
            <span style="color: red;">{{ errors.error }}</span>
         {% endif %}
@@ -14,7 +14,7 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">直接登录</button>
       </form>
 
     </div> <!-- /container -->

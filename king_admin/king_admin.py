@@ -193,7 +193,7 @@ def register(model_class, admin_class=None):
 
 register(models.Customer, CustomerAdmin)
 register(models.CustomerFollowUp, CustomerFollowUpAdmin)
-register(models.UserProfile, UserProfileAdmin)
+# register(models.UserProfile, UserProfileAdmin)
 register(models.CourseRecord, CourseRecordAdmin)
 register(models.StudyRecord, StudyRecordAdmin)
 register(models.Course, CourseAdmin)

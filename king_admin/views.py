@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,reverse
 import importlib
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from king_admin.utils import table_filter, table_sort, table_search
@@ -12,6 +12,7 @@ from crm.permissions import permission
 
 @login_required
 def index(request):
+
     # print(king_admin.enabled_admins['crm']['customerfollowup'].model )
     return render(request, "king_admin/table_index.html", {'table_list': king_admin.enabled_admins})
 
