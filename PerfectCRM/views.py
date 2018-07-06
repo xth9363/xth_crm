@@ -9,8 +9,10 @@ def acc_login(request):
 
     errors = {}
     if request.method == "POST":
-        _email = request.POST.get("email")
-        _password = request.POST.get("password")
+        # _email = request.POST.get("email")
+        # _password = request.POST.get("password")
+        _email = 'xth9363@163.com1'
+        _password = '123456'
 
         user = authenticate(username = _email, password = _password)
         if user:
